@@ -245,7 +245,7 @@ Hallucheck Pro is designed to be extended. Future versions could add:
 
 ## Support
 
-For issues or feature requests, edit this README or the SKILL files to document what you need, then iterate on the plugin locally.
+For issues or feature requests, open an issue on [GitHub](https://github.com/luctaesch/hallucheck-pro/issues). Contributions and PRs welcome.
 
 ---
 
