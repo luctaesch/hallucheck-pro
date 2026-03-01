@@ -124,12 +124,31 @@ All reports go to `x/AI_output/` in your vault.
 
 The plugin requires internet access to:
 - `api.crossref.org` (CrossRef)
+- `doi.org` (DOI resolution)
 - `openlibrary.org` (OpenLibrary)
-- Any bare URLs cited (e.g., HBR, Amazon)
+- `googleapis.com` (Google Books fallback)
+- Any bare URLs cited (e.g., `hbr.org`)
 
 These are public, free APIs with no authentication required.
 
-If you're behind a corporate proxy, you may need to configure network settings in Cowork.
+### Cowork Domain Allowlist
+
+Claude's sandbox restricts outbound network access by default. You must add the required domains manually in:
+
+**Settings → Capabilities → Additional allowed domains**
+
+Add each of the following:
+
+```
+api.crossref.org
+doi.org
+openlibrary.org
+googleapis.com
+```
+
+Add any other domains your cited URLs reference (e.g. `hbr.org`, `pubmed.ncbi.nlm.nih.gov`).
+
+> Without these entries, the `halluurl` phase will report all references as `⚠ Unverifiable (network)`. Run `/hallucheck-test` after adding the domains to confirm connectivity.
 
 ---
 
